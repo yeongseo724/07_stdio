@@ -3,18 +3,14 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int counter;
+int all_files;
 
-void set_counter()
-{
-	counter=20;
-}
+extern void sub(void);
 
 int main(int argc, char *argv[]) {
 	
-	printf("before function call i =%d\n", counter);
-	set_counter(counter);
-	printf("after function call i =%d\n", counter);
+	sub();
+	printf("%d\n", all_files);
 	
 	return 0;
 }
