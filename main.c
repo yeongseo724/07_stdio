@@ -3,22 +3,27 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void f(void);
-
-int i;
+void sub(void);
 
 int main(int argc, char *argv[]) {
 	
-	for(i=0;i<5;i++)
+	int i;
+	for(i=0;i<3;i++)
 	{
-		f();
+		sub();
 	}
 	
 	return 0;
 }
 
-void f(void)
+void sub(void)
 {
-	for(i=0;i<10;i++)
-		printf("#");
+	int auto_count=0;
+	static int static_count=0;
+	
+	auto_count++;
+	static_count++;
+	printf("auto_count=%d\n", auto_count);
+	printf("static_count=%d\n", static_count);
+	
 }
